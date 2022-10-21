@@ -3,26 +3,21 @@ export function isValidUnit(input) {
   return !!input.match(/(\d*\.?\d+)\s?(px|em|rem|%|vh|vw|vmin|vmax+)/gim);
 }
 
+export function parseMargin(input) {
+  const defaultMargin = "0.5em 0";
+  if (input === null) defaultMargin;
+  const splitMargin = input.split(" ");
+  if (splitMargin.length === 2) {
+    if (splitMargin.every((unit) => isValidUnit(unit))) return input;
+  } else {
+    return isValidUnit(input) ? `${input} ${input}` : defaultMargin;
+  }
+}
+
 export default class FancyHR extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
-    this.defaultMargin = "0.5em 0";
-  }
-
-  // isValidUnit(input) {
-  //   if (input === null) return false;
-  //   return input.match(/(\d*\.?\d+)\s?(px|em|rem|%|vh|vw|vmin|vmax+)/gim);
-  // }
-
-  parseMargin(input) {
-    if (input === null) return this.defaultMargin;
-    const splitMargin = input.split(" ");
-    if (splitMargin.length === 2) {
-      if ([splitMargin].every((unit) => isValidUnit(unit))) return input;
-    } else {
-      return isValidUnit(input) ? `${input} ${input}` : this.defaultMargin;
-    }
   }
 
   connectedCallback() {
