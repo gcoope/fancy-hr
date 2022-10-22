@@ -10,7 +10,7 @@ HTML `<hr>` element, just a little bit :sparkles:fancier:sparkles:
 
 ```html
 <head>
-    <script src="https://cdnjs.cloudflare.com/tbc-id-goes-here></scipt>
+    <script src="https://cdn.jsdelivr.net/gh/gcoope/fancy-hr@latest/dist/fancy-hr.js></scipt>
 </head>
 
 <body>
@@ -18,7 +18,7 @@ HTML `<hr>` element, just a little bit :sparkles:fancier:sparkles:
 </body>
 ```
 
-To import the JS file, add the `<script` tag above into your HTML file's `<head>`. Alternatively if you don't want to use the CDN you are welcome to clone/build a local version of the fancy-hr file (see the develop section below) and include that in your project bundle.
+To import the JS file, add the `<script` tag above into your HTML file's `<head>`. Alternatively if you don't want to use [the CDN URL you](https://cdn.jsdelivr.net/gh/gcoope/fancy-hr@latest/dist/fancy-hr.js) are welcome to clone/build a local version of the fancy-hr file (see the develop section below) and include that in your project bundle.
 
 ## Attributes
 
