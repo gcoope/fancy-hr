@@ -2,42 +2,62 @@
   <head>
     <title>fancy-hr Web Component</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins");
       body {
-        font-family: sans-serif;
-        margin: 2em;
+        font-family: Poppins, sans-serif;
+      }
+      main {
+        max-width: 90ch;
+        font-size: medium;
+        margin: 2em auto;
+      }
+      h1 {
+        text-align: center;
+        font-size: 2.5em;
+      }
+      a,
+      a:visited,
+      a:focus {
+        color: seagreen;
+      }
+      code {
+        background-color: rgba(175, 184, 193, 0.2);
+        border-radius: 6px;
+        padding: 0.2em 0.4em;
+        font-family: monospace;
       }
     </style>
   </head>
 
   <body>
-    <h1>Example Header</h1>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis fugit
-      impedit, recusandae autem ex ullam dolorum? Voluptates, minima
-      accusantium! Nisi animi consectetur tenetur necessitatibus error aliquam
-      fugiat rem ducimus ipsa?
-    </p>
-    <fancy-hr></fancy-hr>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-      molestiae enim dignissimos magnam? Aperiam, natus sequi, culpa consectetur
-      asperiores velit enim minus non aliquid aliquam nostrum. Totam dolorem
-      odit provident?
-    </p>
-    <fancy-hr
-      variant="double"
-      height="6px"
-      border-radius="15px"
-      margin="0 4em"
-      color="green"
-    ></fancy-hr>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt
-      molestiae enim dignissimos magnam? Aperiam, natus sequi, culpa consectetur
-      asperiores velit enim minus non aliquid aliquam nostrum. Totam dolorem
-      odit provident?
-    </p>
-    <!-- TODO Make src the deployed CDN link -->
-    <script src="../dist/fancy-hr.js"></script>
+    <main>
+      <h1>fancy-hr</h1>
+      <fancy-hr color="#666666" width="80%" margin="auto"></fancy-hr>
+      <h3>
+        <a href="https://github.com/gcoope/fancy-hr">fancy-hr</a> is a
+        minimalist, zero-dependency
+        <a href="https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+          >Web Component</a
+        >
+        that can quickly and easily be dropped into <i>almost</i> any web page.
+      </h3>
+      <h3>Usage</h3>
+      <p>
+        <strong>TL;DR</strong> - Import the (&lt;5KB) JS file into your HTML
+        file and use the <code>&lt;fancy-hr&gt;&lt;/fancy-hr&gt;</code> tag
+        wherever you want.
+      </p>
+      <h3>Examples</h3>
+      <fancy-hr></fancy-hr>
+      <fancy-hr color="seagreen" variant="dashed" height="8px"></fancy-hr>
+      <fancy-hr
+        variant="double"
+        height="6px"
+        border-radius="15px"
+        margin="0 4em"
+        color="rebeccapurple"
+      ></fancy-hr>
+      <fancy-hr variant="dotted" height="10px" color="#FF1493"></fancy-hr>
+    </main>
   </body>
 </html>

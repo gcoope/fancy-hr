@@ -19,10 +19,13 @@ export function parseMargin(input) {
   if (input === null) return defaultMargin;
   const splitMargin = input.split(" ");
   if (splitMargin.length === 2) {
-    if (splitMargin.every((unit) => isValidUnit(unit))) return input;
+    if (splitMargin.every((unit) => isValidUnit(unit) || unit === "auto"))
+      return input;
     else return defaultMargin;
   } else {
-    return isValidUnit(input) ? `${input} ${input}` : defaultMargin;
+    return isValidUnit(input) || input === "auto"
+      ? `${input} ${input}`
+      : defaultMargin;
   }
 }
 
@@ -47,19 +50,20 @@ export default class FancyHR extends HTMLElement {
     const height = this.getAttr("height", "1px", isValidUnit);
     const borderRadius = this.getAttr("border-radius", "0px", isValidUnit);
 
-    let style = document.createElement("style");
+    const style = document.createElement("style");
     style.textContent = `
     .fancy-hr {
-      border: ${height} ${variant} ${color};
+      border${
+        ["dotted", "dashed"].includes(variant) ? "-top" : ""
+      }: ${height} ${variant} ${color};
       border-radius: ${borderRadius};
       margin: ${margin};
       width: ${width};
-    }
-    `;
+      background-color: ${variant === "solid" ? color : "transparent"}}
+    }`;
 
     const hr = document.createElement("hr");
     hr.setAttribute("class", "fancy-hr");
-
     this.shadowRoot.appendChild(style);
     this.shadowRoot.appendChild(hr);
   }
