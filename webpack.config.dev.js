@@ -15,7 +15,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: "fancy-js",
-      template: "./example/index.html",
+      template: "./template/index.html",
       inject: "body",
     }),
   ],

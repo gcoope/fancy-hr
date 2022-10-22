@@ -10,11 +10,11 @@ HTML `<hr>` element, just a little bit :sparkles:fancier:sparkles:
 
 ```html
 <head>
-    <script src="https://cdn.jsdelivr.net/gh/gcoope/fancy-hr@latest/dist/fancy-hr.js></scipt>
+  <script src="https://cdn.jsdelivr.net/gh/gcoope/fancy-hr@latest/dist/fancy-hr.js"></script>
 </head>
 
 <body>
-    <fancy-hr></fancy-hr>
+  <fancy-hr></fancy-hr>
 </body>
 ```
 
