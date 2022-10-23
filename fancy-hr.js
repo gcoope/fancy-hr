@@ -50,12 +50,13 @@ export default class FancyHR extends HTMLElement {
     const height = this.getAttr("height", "1px", isValidUnit);
     const borderRadius = this.getAttr("border-radius", "0px", isValidUnit);
 
+    const singleBorder = ["dotted", "dashed"].includes(variant);
+
     const style = document.createElement("style");
     style.textContent = `
     .fancy-hr {
-      border${
-        ["dotted", "dashed"].includes(variant) ? "-top" : ""
-      }: ${height} ${variant} ${color};
+      border${singleBorder ? "-top" : ""}: ${height} ${variant} ${color};
+      ${singleBorder ? "border-bottom: 0;" : ""}
       border-radius: ${borderRadius};
       margin: ${margin};
       width: ${width};
