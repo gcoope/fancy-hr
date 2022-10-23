@@ -4,6 +4,8 @@ HTML `<hr>` element, just a little bit :sparkles:fancier:sparkles:
 
 > fancy-hr is a zero-dependency [Web Component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) that is <5kb that can quickly and easily be dropped into _almost_ any web page.
 
+[Demo](https://343d0b63.fancy-hr.pages.dev/)
+
 ## Usage
 
 **TL;DR** - Import the JS file and use the `<fancy-hr></fancy-hr>` tag wherever you want.
@@ -41,7 +43,7 @@ To import the JS file, add the `<script` tag above into your HTML file's `<head>
 
 The underlying component uses a native `<hr>` element, we are only adding visual changes to it. Due to this, `<fancy-hr></fancy-hr>` is actually **a compliant and recommended tag** to use when breaking up sections of your markup.
 
-_**However**_ - if you are intending to use `<fancy-hr></fancy-hr>` fure purely decorative purposes, it would be recommended to use an SVG image or a styled `<div>`.
+_**However**_ - if you are intending to use `<fancy-hr></fancy-hr>` for purely decorative purposes, it would be recommended to use an SVG image or a styled `<div>`.
 
 ## Development
 
