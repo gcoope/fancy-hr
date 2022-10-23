@@ -4,7 +4,7 @@ HTML `<hr>` element, just a little bit :sparkles:fancier:sparkles:
 
 > fancy-hr is a zero-dependency [Web Component](https://developer.mozilla.org/en-US/docs/Web/Web_Components) that is <5kb that can quickly and easily be dropped into _almost_ any web page.
 
-[Demo](https://343d0b63.fancy-hr.pages.dev/)
+[Demo](https://56be7640.fancy-hr.pages.dev/)
 
 ## Usage
 
